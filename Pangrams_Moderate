@@ -1,0 +1,15 @@
+#python2.7
+import sys
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+with open(sys.argv[1], 'r') as test_cases:
+    for test in test_cases:
+        finstring = ''
+        line = test.lower()
+        for letter in alphabet:
+            if letter not in line:
+                finstring+=letter
+        if len(finstring)>0:
+            print finstring
+        else:
+            print 'NULL'
+        
