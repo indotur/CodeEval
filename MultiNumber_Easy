@@ -1,0 +1,12 @@
+#Python2.7
+import sys
+with open(sys.argv[1],'r') as test_cases:
+    fileread = test_cases.readlines()
+    for i in fileread:
+	    i = i.strip().split(',')
+	    num1 = int(i[0])
+	    num2 = int(i[1])
+	    n = num2
+	    while num1>num2:
+		    num2+=n
+	    print num2
