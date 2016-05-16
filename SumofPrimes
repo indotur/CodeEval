@@ -1,0 +1,13 @@
+#Python 2.7
+fulllist = []
+primelist = [2,3,5]
+for i in range(2,10000):
+	fulllist.append(i)
+for prime in primelist:
+	for full in fulllist:
+		if full%prime == 0:
+			fulllist.remove(full)
+		if prime==primelist[-1] and full%prime!=0:
+			fulllist.remove(full)
+			primelist.append(full)
+print sum(primelist[:1000])
