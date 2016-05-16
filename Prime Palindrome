@@ -1,0 +1,18 @@
+#python 2.7
+fulllist = []
+primelist = [2,3,5]
+palinprime = []
+for i in range(2,1000):
+	fulllist.append(i)
+for prime in primelist:
+	for full in fulllist:
+		if full%prime == 0:
+			fulllist.remove(full)
+		if prime==primelist[-1] and full%prime!=0:
+			fulllist.remove(full)
+			primelist.append(full)
+for x in primelist:
+	if len(str(x))>2:
+		if str(x)==str(x)[::-1]:
+			palinprime.append(x)
+print palinprime[-1]
