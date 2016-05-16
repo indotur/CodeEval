@@ -1,0 +1,19 @@
+#python2.7
+import sys
+
+def stringchanger(n):
+	CAP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	low = 'abcdefghijklmnopqrstuvwxyz'
+	finstring = ''
+	for i in str(n):
+		if i in CAP:
+			finstring+=i.lower()
+		elif i in low:
+			finstring+=i.upper()
+		else:
+			finstring+=i
+	return finstring
+
+with open(sys.argv[1], 'r') as test_cases:
+    for test in test_cases:
+        print stringchanger(test)
