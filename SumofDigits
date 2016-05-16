@@ -1,0 +1,10 @@
+#python2.7
+import sys
+
+with open(sys.argv[1], 'r') as test_cases:
+    readline = test_cases.readlines()
+    for i in readline:
+        number = i.strip()
+        newlist = [int(j) for j in str(number)]
+        print sum(newlist)
+            
