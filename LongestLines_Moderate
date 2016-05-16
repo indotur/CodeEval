@@ -1,0 +1,13 @@
+#python2.7
+import sys
+with open(sys.argv[1],'r') as test_cases:
+	dictionary = {}
+	filereader = test_cases.readlines()
+	number = int(filereader[0].strip())
+	for line in filereader[1:]:
+		line = line.strip()
+		dictionary[len(line)]=line
+	sortedlist = [i for i in dictionary]
+	sortedlist.sort(reverse=True)
+	for i in sortedlist[:number]:
+		print dictionary[i]
